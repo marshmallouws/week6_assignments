@@ -148,8 +148,8 @@ function countVotes(array) {
 
 
 
-/*
-console.log("only a: " + onlyA);
+
+/*console.log("only a: " + onlyA);
 console.log("reversed: " + reversed);
 console.log("myFilter: " + testMyFilter);
 console.log("myMap: " + testMyMap);

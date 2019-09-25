@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <script defer src="bundle.js"></script>
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>Users</h1>
+    <button id="getusersbutton">Get users</button><br>
+    <button id="buttongetuserfromid">Get user</button>
+    <input type="number" placeholder="write id" id="idinput"><br><br>
+    <form>
+      <input type="number" id="inputage" placeholder="age"><br>
+      <input type="text" id="inputname" placeholder="name"><br>
+      <input type="radio" id="r1" name="gender" value="male" checked>Male<br>
+      <input type="radio" id="r2" name="gender" value="female">Female<br>
+      <input type="text" id="inputemail" placeholder="email"><br>
+      <input type="submit" id="adduserbtn" value="Add user">
+      <input type="submit" id="updateuserbtn" value="Update existing user">
+      <input type="number" id="updateid" placeholder="id on user to update">
+    </form>
+    <table id="table" class="table table-striped" style="width: 100%">
+        <tr>
+            <th>Id</th>
+            <th>Age</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+        </tr>
+    </table>
+  </div>
+  
+</body>
+
+</html>
+

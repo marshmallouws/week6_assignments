@@ -72,6 +72,8 @@ var num1 = num.map(function (value, index) {
     return value + num[index + 1];
 });
 
+console.log(num1);
+
 //b
 function toHtml(array) {
     var res = array.map(function (name) {

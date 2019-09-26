@@ -16,6 +16,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -26,13 +27,15 @@ import javax.ws.rs.core.Response;
  */
 @Path("simple")
 public class SimpleResource {
-    private static ArrayList<String>  name = new ArrayList<String>() {
-            {
-                add("{\"name\": \"Peter\"}");
-            }
-        };
-    
-    
+
+    private static String name = "{\"id\": 1 \"name\": \"Peter\"}";
+
+    private static ArrayList<String> names = new ArrayList<String>()
+    {
+        {
+            add(name);
+        }
+    };
     @Context
     private UriInfo context;
 
@@ -40,41 +43,49 @@ public class SimpleResource {
      * Creates a new instance of SimpleResource
      */
     public SimpleResource() {
-        
     }
-    
+
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String demo() {
+        return "{\"msg\":\"Hello World\"}";
+    }
+
     /**
      * Retrieves representation of an instance of rest.SimpleResource
+     *
      * @return an instance of java.lang.String
      */
     @Path("/read")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
-        return new Gson().toJson(name);
+        return names.toString();
     }
-    
+
     @Path("/delete/{name}")
     @DELETE
     @Produces({MediaType.APPLICATION_JSON})
-    public void deleteJson() {
+    public void deleteJson(@PathParam("name") String name) {
+        for (String str : names) {
+            System.out.println(name);
+            if (str.contains("\"" + name + "\"")) {
+                names.remove(str);
+            }
+        }
+    }
+
+    @Path("/update/{name}")
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void putJson(@PathParam("name") String name) {
         
     }
 
-    /**
-     * PUT method for updating or creating an instance of SimpleResource
-     * @param content representation for the resource
-     */
-    @Path("/update")
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void putJson(String person) {
-    }
-    
     @Path("/create")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void postJson(String person) {
-        name.add(new Gson().toJson(person));
+    public void postJson(String name) {
+        names.add(name);
     }
 }

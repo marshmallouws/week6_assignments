@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "id": 100,
-      "age": 39,
-      "name": "Madeleine Flynn",
-      "gender": "female",
-      "email": "madeleineflynn@jumpstack.com"
+      "age": "10",
+      "name": "something",
+      "gender": "male",
+      "email": "something@mail.com",
+      "id": 100
     },
     {
       "id": 101,
@@ -104,6 +104,55 @@
       "gender": "male",
       "email": "marshmallouws@gmail.com",
       "id": 114
+    },
+    {
+      "age": "12",
+      "name": "Annika Ehlers",
+      "gender": "male",
+      "email": "marshmallouws@gmail.com",
+      "id": 115
+    },
+    {
+      "age": "12",
+      "name": "Laekekrmås",
+      "gender": "male",
+      "email": "hej@mail.dk",
+      "id": 116
+    },
+    {
+      "age": "10",
+      "name": "Hans",
+      "gender": "male",
+      "email": "marshmallouws@gmail.com",
+      "id": 117
+    },
+    {
+      "age": "10",
+      "name": "ANnika",
+      "gender": "male",
+      "email": "marshmallouws@gmail.com",
+      "id": 118
+    },
+    {
+      "age": "10",
+      "name": "Lasse",
+      "gender": "male",
+      "email": "lasse@mail.com",
+      "id": 119
+    },
+    {
+      "age": "10",
+      "name": "Mathias",
+      "gender": "male",
+      "email": "marthias@mail.dk",
+      "id": 120
+    },
+    {
+      "age": "99",
+      "name": "Lars Larsen",
+      "gender": "male",
+      "email": "lars@mail.dk",
+      "id": 121
     }
   ]
 }
